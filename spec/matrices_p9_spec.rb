@@ -76,24 +76,25 @@ describe Matriz do
 			(@m1!=@m2).should eq(false)
 		end
 	end
-
+=end
 #Modificacion
 	describe "#Operadores de comparacion" do
 		it "Suma fracciones" do
 			(@m5+@m6).to_s.should eq("[[1/1, 1/1], [1/1, 1/1]]")
 		end
 
-		it "Multiplicacion de fracciones" do
+=begin		it "Multiplicacion de fracciones" do
 			(@m5*@m6).to_s.should eq("[[1/2, 3/5], [11/40, 49/150]]")
 		end
-	end
 =end
+	end
+
 #creacion de matrices dispersas
 	describe "#creando una matriz dispersa" do
 		it "Comprobando que se creo correctamente." do
-			@m3.pos(1,1).should eq(1)
-			@m3.pos(2,2).should eq(2)
-			@m3.pos(3,3).should eq(3)
+			@m3.pos(0,0).should eq(1)
+			@m3.pos(1,1).should eq(2)
+			@m3.pos(2,2).should eq(3)
 		end
 	end
 
@@ -102,7 +103,7 @@ describe Matriz do
 #Prueba de matrices densas y dispersas. 
 	describe "#Operaciones de suma entre matrices densas y dispersas." do
 		it "Suma de matrices dispersas" do
-			(@m3+@m4).to_s().should eq("[[2, 0, 0], [0, 4, 0], [0, 0, 6]]")
+			(@m3+@m4).to_s().should eq("[[0,0,2][1,1,4][2,2,6]]")
 		end		
 		
 		it "Suma de matrices densas y dispersas" do

@@ -10,3 +10,8 @@ task :spec do
   sh "cd spec \n rspec -I. matrices_spec.rb"
 end
 
+desc "Run UnitTest"
+task :test do
+  sh "ruby -Ilib -Itest test/tc_MatrizDispersa.rb \n ruby -Ilib -Itest test/tc_MatrizDensa.rb" 
+end
+

@@ -1,8 +1,7 @@
 # Pruebas unitarias de la clase matriz densa
 
-require "./lib/fraccion.rb"
-require "./lib/matrices_p9.rb"
-
+require 'fraccion'
+require 'matrices_p9'
 require "test/unit"
 
 

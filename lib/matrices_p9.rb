@@ -347,12 +347,13 @@ end
 if (a>=b)
 	puts "mayor"
 end
-=end
-
 
 b=MatrizDispersa.new(3,3,[0,1,2],[0,1,2],[1,2,3])
 c=MatrizDispersa.new(3,3,[0,1,2],[0,2,2],[1,2,3])
 b=(b+c)
 puts "#{b.to_s}"
+
+
+=end
 
 
