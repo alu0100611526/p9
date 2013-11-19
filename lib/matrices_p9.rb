@@ -1,5 +1,6 @@
+require "matrices_p9/version"
 require "fraccion.rb"
-#QUITAR LOS TO_F DE LAS OPERACIONES Y HACER UN COERCE!!!!!!!!!!!
+
 class Matriz
 attr_accessor :fil, :col
 include Comparable

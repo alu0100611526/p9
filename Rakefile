@@ -5,10 +5,6 @@ require 'rspec/core/rake_task'
 RSpec::Core::RakeTask.new
 task :default => :spec
 
-desc "Run spec"
-task :spec do
-  sh "cd spec \n rspec -I. matrices_spec.rb"
-end
 
 desc "Run UnitTest"
 task :test do
