@@ -1,4 +1,4 @@
-require 'matriz_p9' 
+require 'matrices_p9' 
 
 describe Matriz do
 	before :each do	
@@ -13,9 +13,6 @@ describe Matriz do
 		#Matrices densas con fracciones
 		@m5 = MatrizDensa.new(2,2,[Fraccion.new(1,2),Fraccion.new(1,3),Fraccion.new(1,4),Fraccion.new(1,5)])
 		@m6 = MatrizDensa.new(2,2,[Fraccion.new(1,2),Fraccion.new(2,3),Fraccion.new(3,4),Fraccion.new(4,5)])
-
-		
-
 	end
 
 #Initialize
@@ -98,6 +95,7 @@ describe Matriz do
 			@m3.pos(2,2).should eq(2)
 			@m3.pos(3,3).should eq(3)
 		end
+	end
 
 
 

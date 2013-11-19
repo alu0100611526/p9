@@ -1,11 +1,10 @@
 
 #require "./gcd.rb"
 #Programa que trabaja con fracciones
-#Adriana Rolo Inchausti, Luis Antonio Orta Mendez
+#Adriana Rolo Inchausti, Luis Antonio Orta Mendes 
 
 class Fraccion
 attr_reader :denominador, :numerador
-include Comparable
 
 	def initialize(num, denomin)
 		#atributo
@@ -42,7 +41,7 @@ include Comparable
         end
         
 #Metodo que devuelve el numero decimal que representa la matriz 
-	def flotante 
+	def to_f 
 		a=@numerador.to_f
 		b=@denominador.to_f
 		a/b
@@ -84,9 +83,13 @@ include Comparable
 	def mcm(a,b)
 		(a*b)/gcd(a,b)
     	end
-#Sobrecarga del operador de suma, recibe como parametros dos francciones y devuelve una fraccion con el resultado de la suma
-	def +(other)		
-		if (@denominador ==  other.denominador )
+#Sobrecarga del operador de suma, recibe como parametros dos fracciones y devuelve una fraccion con el resultado de la suma
+	def +(other)
+		if(other.instance_of?Fixnum)
+			temp=other
+			other=Fraccion.new(temp,1)
+		end
+		if (@denominador ==  other.denominador)
 			nume=@numerador + other.numerador
 			deno=@denominador
 			mcd=gcd(nume,deno)
@@ -103,6 +106,10 @@ include Comparable
 
 #Sobrecarga del operador de resta, recibe como parametros dos francciones y devuelve una fraccion con el resultado de la resta
 	def -(other)
+		if(other.instance_of?Fixnum)
+			temp=other
+			other=Fraccion.new(temp,1)
+		end
 		if (@denominador ==  other.denominador )
 			nume=@numerador - other.numerador
 			deno=@denominador
@@ -119,9 +126,6 @@ include Comparable
 		
 		temp = Fraccion.new(nume/mcd, deno/mcd)
 	end
-
-
-
 
 #Sobrecarga del operador de multiplicación, recibe como parametros dos francciones y devuelve una fraccion con el resultado de la multiplicación
 	def * (other) 
@@ -150,15 +154,6 @@ include Comparable
 	end
 
 
-
-#Operador de comparacion (Modulo comparable)
-	def <=> (other)
-		return nil unless other.instance_of?Fraccion
-		(@numerador/@denominador)<=>(other.numerador/other.denominador)
-	end
-
-
-=begin
 #Sobrecarga de operadores de comparación devuelve true en caso de que sea cierto y falso en caso contrario 
 #Mayor que 
 	def > (otro)
@@ -197,8 +192,11 @@ include Comparable
 		end
 		
 	end
-=end	
-end 
+#Coerce
+	def coerce(other)
+		[self, other]
+	end
+end
 
 
 
