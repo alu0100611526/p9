@@ -5,10 +5,12 @@ describe Matriz do
 		#Matrices densas
 		@m1 = MatrizDensa.new(3,3,[1,2,3,4,5,6,7,8,9])
 		@m2 = MatrizDensa.new(3,3,[1,2,3,4,5,6,7,8,9])
+		@mm1 = MatrizDensa.new(2,2,[1,1,1,1])
 		
 		#Matrices dispersas
 		@m3 = MatrizDispersa.new(3,3,[0,1,2],[0,1,2],[1,2,3])
 		@m4 = MatrizDispersa.new(3,3,[0,1,2],[0,1,2],[1,2,3])
+		@mm2 = MatrizDispersa.new(2,2,[0],[0],[Fraccion.new(1,2)])
 		
 		#Matrices densas con fracciones
 		@m5 = MatrizDensa.new(2,2,[Fraccion.new(1,2),Fraccion.new(1,3),Fraccion.new(1,4),Fraccion.new(1,5)])
@@ -115,7 +117,17 @@ describe Matriz do
 		end
 		
 	end
+#Prueba de modificacion 
+
+	describe "#Operaciones de suma entre matrices densas y dispersas con fracciones." do
 	
+		it "Suma" do
+			(@mm1+@mm2).to_s().should eq("[[3/2, 1], [1, 1]]")
+			
+		end		
+		
+		
+	end	
 	
 	
 	

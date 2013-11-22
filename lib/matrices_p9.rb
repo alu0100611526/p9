@@ -206,7 +206,7 @@ attr_accessor :mat
 	def to_s    
 		"#{@mat}"
 	end
-
+	#cambiar los for para hacerlos con bloques.	
 	def max
 		m = self.mat[0][0]
 		for i in (0...@fil.to_i)
