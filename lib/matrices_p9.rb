@@ -20,18 +20,27 @@ include Comparable
 				temp = MatrizDensa.new(self.fil, self.col, nil)
 				if other.instance_of?MatrizDensa
 					
-					for i in (0...@fil.to_i)
-						for j in (0...@col.to_i)
-							temp.mat[i][j] = (self.mat[i][j]) + (other.mat[i][j])
+					#for i in (0...@fil.to_i)
+					@fil.to_i.times do |i| 
+					
+						#for j in (0...@col.to_i)
+						@col.to_i.times do |j|
+							temp.mat[i][j] = (@mat[i][j]) + (other.mat[i][j])
+							
 						end
 					end
 				end
 
 				if other.instance_of?MatrizDispersa
-					for i in (0...@fil.to_i)
-						for j in (0...@col.to_i)
+					#for i in (0...@fil.to_i)
+					@fil.to_i.times do |i| 
+					
+						#for j in (0...@col.to_i)
+						@col.to_i.times do |j| 
+					
 							encontrado = 0
-							for k in (0...other.posx.size)
+							#for k in (0...other.posx.size)
+							other.posx.size.times do |k| 
 								if (i==other.posx[k] and j==other.posy[k] and encontrado==0)
 									temp.mat[i][j] = (self.mat[i][j]) + (other.valor[k])
 									encontrado = 1	
@@ -49,10 +58,14 @@ include Comparable
 			if self.instance_of?MatrizDispersa
 				if other.instance_of?MatrizDensa
 					temp = MatrizDensa.new(self.fil, self.col, nil)
-					for i in (0...@fil.to_i)
+					#for i in (0...@fil.to_i)
+						@fil.to_i.times do |i| 
+					
 						for j in (0...@col.to_i)
 							encontrado = 0
-							for k in (0...self.posx.size.to_i)
+							#for k in (0...self.posx.size.to_i)
+							self.posx.size.times do |k| 
+							
 								if (i==self.posx[k] and j==self.posy[k] and encontrado==0)
 									temp.mat[i][j] = (other.mat[i][j]) + (self.valor[k])
 									encontrado = 1	
@@ -72,9 +85,13 @@ include Comparable
 					temp.posx = self.posx
 					temp.posy = self.posy
 
-					for j in (0...other.posx.size.to_i)
+					#for j in (0...other.posx.size.to_i)
+					other.posx.size.to_i.times do |j| 
+					
 						encontrado = false
-						for k in (0...self.posx.size.to_i)
+						#for k in (0...self.posx.size.to_i)
+						self.posx.size.times do |k| 
+							
 							if(other.posx[j] == temp.posx[k] and other.posy[j] == temp.posy[k])
 								temp.valor[k] = temp.valor[k] + other.valor[j]
 								encontrado = true
@@ -102,18 +119,28 @@ include Comparable
 			if self.instance_of?MatrizDensa
 				temp = MatrizDensa.new(self.fil, self.col, nil)
 				if other.instance_of?MatrizDensa		
-					for i in (0...@fil.to_i)
-						for j in (0...@col.to_i)
+					#for i in (0...@fil.to_i)
+					@fil.to_i.times do |i| 
+					
+						#for j in (0...@col.to_i)
+						@col.to_i.times do |j| 
+							
 							temp.mat[i][j] = (self.mat[i][j]) - (other.mat[i][j])
 						end
 					end
 				end
 
 				if other.instance_of?MatrizDispersa
-					for i in (0...@fil.to_i)
-						for j in (0...@col.to_i)
+					#for i in (0...@fil.to_i)
+					@fil.to_i.times do |i| 
+					
+						#for j in (0...@col.to_i)
+						@col.to_i.times do |j| 
+					
 							encontrado = 0
-							for k in (0...other.posx.size)
+							#for k in (0...other.posx.size)
+							other.posx.size.times do |k| 
+							
 								if (i==other.posx[k] and j==other.posy[k] and encontrado==0)
 									temp.mat[i][j] = (self.mat[i][j]) - (other.valor[k])
 									encontrado = 1	
@@ -131,10 +158,16 @@ include Comparable
 			if self.instance_of?MatrizDispersa
 				if other.instance_of?MatrizDensa
 					temp = MatrizDensa.new(self.fil, self.col, nil)
-					for i in (0...@fil.to_i)
-						for j in (0...@col.to_i)
+					#for i in (0...@fil.to_i)
+					@fil.to_i.times do |i| 
+					
+						#for j in (0...@col.to_i)
+						@col.to_i.times do |j| 
+							
 							encontrado = 0
-							for k in (0...self.posx.size.to_i)
+							#for k in (0...self.posx.size.to_i)
+							self.posx.size.times do |k| 
+							
 								if (i==self.posx[k] and j==self.posy[k] and encontrado==0)
 									temp.mat[i][j] = (other.mat[i][j]) - (self.valor[k])
 									encontrado = 1	
@@ -154,9 +187,13 @@ include Comparable
 					temp.posx = self.posx
 					temp.posy = self.posy
 
-					for j in (0...other.posx.size.to_i)
+					#for j in (0...other.posx.size.to_i)
+					other.posx.size.times do |j| 
+							
 						encontrado = false
-						for k in (0...self.posx.size.to_i)
+						#for k in (0...self.posx.size.to_i)
+						self.posx.size.times do |k| 
+							
 							if(other.posx[j] == temp.posx[k] and other.posy[j] == temp.posy[k])
 								temp.valor[k] = temp.valor[k] - other.valor[j]
 								encontrado = true
@@ -210,7 +247,9 @@ attr_accessor :mat
 	def max
 		m = self.mat[0][0]
 		for i in (0...@fil.to_i)
-			for j in (0...@col.to_i)
+			#for j in (0...@col.to_i)
+			@col.to_i.times do |j| 
+							
 				if (self.mat[i][j] > m)
 					m = self.mat[i][j]
 				end
@@ -222,7 +261,8 @@ attr_accessor :mat
 	def min
 		m = self.mat[0][0]
 		for i in (0...@fil.to_i)
-			for j in (0...@col.to_i)
+			#for j in (0...@col.to_i)
+			@col.to_i.times do |j| 
 				if (self.mat[i][j] < m)
 					m = self.mat[i][j]
 				end
@@ -305,8 +345,11 @@ attr_accessor :posx, :posy, :valor
 end
 
 
-
-
+#|i,j, mat1,mat2| mat2[i][j] = (mat1[i][j]) + (mat2[i][j]) return mat2
+	
+	
+#	f = Proc.new{|i,j, mat1, mat2| mat2[i][j] = (mat1[i][j]) + (mat2[i][j]) puts "#{mat2[i][j]}"}
+#	f.call(1,1,[[1,2],[1,2]],[[1,2],[1,2]])
 
 
 
