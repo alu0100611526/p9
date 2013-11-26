@@ -1,14 +1,21 @@
 require "matrices_p9/version"
 require "fraccion.rb"
 
+#Clase abstracta de la que heredan matriz densa y dispersa. No se puede crear un objeto de esta clase.
 class Matriz
-attr_accessor :fil, :col
+
+#Modulo para comparar
 include Comparable
 
+#Numero de filas
+#Numero de columnas 
+
+attr_accessor :fil, :col 
+
+	#Se almacena el valor de las filas y las columnas segun se le pasen por parametros. 
 	def initialize(f, c)
-		#atributo
-	    	@fil=f.to_i; #Numero de filas
-	    	@col=c.to_i; #Numero de columnas
+	    	@fil=f.to_i; 	    	
+	    	@col=c.to_i; 
 	end
 
 
@@ -112,7 +119,8 @@ include Comparable
 			return nil
 		end
 	end
-
+	#Sobrecarga del operador de resta, recibe como parametros dos matrices y devuelve una matriz con el resultado de la suma de forma A-B= (Aij+Bij)
+	
 	def -(other)	             
 		if(self.fil == other.fil and self.col == other.col)
 			# SELF Matrices densas
@@ -217,13 +225,15 @@ include Comparable
 	    
 end
 
-
+#Clase que hereda de la clase matriz. Almacena matrices densas.
 class MatrizDensa < Matriz
-attr_accessor :mat
-	def initialize(f,c,e)
+#Array bidimensional que representa la matriz
+attr_accessor :mat 
+	#crea una matriz con n filas, m columnas y almacena los valores que se le pasan por parámetros
+	def initialize(f,c,e) 
+	
 		super(f,c)
-		@mat = Array.new(@fil.to_i){Array.new(@col.to_i)}
-
+		@mat = Array.new(@fil.to_i){Array.new(@col.to_i)} #k2
 	    	if (e != nil)
 			#Rellenamos la matriz con lo valores recibidos 
 	    		for i in (0...@fil.to_i)
@@ -233,8 +243,8 @@ attr_accessor :mat
 	    		end
 	    	end
 	end
-	# Metodos getter devuelve el valor de una posicion determinada
-
+	
+	# Metodo getter que devuelve el valor de una posicion determinada
 	def pos(a,b)
 		@mat[a][b]
 	end
@@ -243,7 +253,8 @@ attr_accessor :mat
 	def to_s    
 		"#{@mat}"
 	end
-	#cambiar los for para hacerlos con bloques.	
+	
+	#funcion que calcula el mayor valor que se encuentra en la matriz	
 	def max
 		m = self.mat[0][0]
 		for i in (0...@fil.to_i)
@@ -257,7 +268,8 @@ attr_accessor :mat
 		end
 		return m
 	end
-
+	
+	#funcion que calcula el menor valor que se encuentra en la matriz
 	def min
 		m = self.mat[0][0]
 		for i in (0...@fil.to_i)
@@ -271,8 +283,8 @@ attr_accessor :mat
 		return m
 	end
 	                             
-#Operador de comparacion (Modulo comparable). se comparan por la suma de sus componentes ¡¡¡¡¡¡PONERLO EN LA CLASE MADRE!!!!!!
 
+#Operador de comparacion (Modulo comparable). se comparan por la suma de sus componentes.
 	def <=> (other)
 		return nil unless other.is_a?MatrizDensa
 		c1=0
@@ -293,9 +305,15 @@ end
 		
 
 
-
+#Clase que hereda de la clase Matriz. Almacena matrices dispersas (matrices que la mayoria de sus posiciones son nulas 0)
 class MatrizDispersa < Matriz
+#Almacena las filas en que se encuentra algun valor
+#Almacena las columnas en que se encuentra algun valor
+#Almacena los valores correspondientes
+
 attr_accessor :posx, :posy, :valor
+
+# se recibe el valor de filas, columnas, los dos arrays con las posiciones en que hay valores y los valores correspondientes
 	def initialize(f,c,posx, posy, valor)
 		super(f,c)
 		@posx = posx
@@ -303,7 +321,8 @@ attr_accessor :posx, :posy, :valor
 		@valor = valor
 
 	end
-
+	
+	#Mdevuelve la matriz en forma de string
 	def to_s
 		s=String.new
 		s << "["
@@ -312,7 +331,8 @@ attr_accessor :posx, :posy, :valor
 		end
 		s << "]"
 	end
-
+	
+	#devuelve el mayor valor almacenado en la matriz
 	def max
 		m = self.valor[0]
 		for i in (0...self.valor.size.to_i)
@@ -322,7 +342,8 @@ attr_accessor :posx, :posy, :valor
 		end
 		return m
 	end
-
+	
+	#devuelve el menor valor almacenado en la matriz
 	def min
 		m = self.valor[0]
 		for i in (0...self.valor.size.to_i)
@@ -332,7 +353,7 @@ attr_accessor :posx, :posy, :valor
 		end
 		return m
 	end
-
+	#Retorna el valor correspondiente a las posiciones que se le pasen como parámetros
 	def pos(a,b)
 		for i in (0...self.posx.size)
 			if(posx[i]==a and posy[i]==b)

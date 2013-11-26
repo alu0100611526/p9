@@ -41,17 +41,15 @@
         
           <li class="file"><a href="./Gemfile.html">Gemfile</a></li>
         
-          <li class="file"><a href="./Gemfile~.html">Gemfile~</a></li>
-        
           <li class="file"><a href="./Guardfile.html">Guardfile</a></li>
+        
+          <li class="file"><a href="./Guardfile~.html">Guardfile~</a></li>
         
           <li class="file"><a href="./LICENSE_txt.html">LICENSE.txt</a></li>
         
           <li class="file"><a href="./Rakefile.html">Rakefile</a></li>
         
           <li class="file"><a href="./Rakefile~.html">Rakefile~</a></li>
-        
-          <li class="file"><a href="./tmp/rspec_guard_result.html">rspec_guard_result</a></li>
         
         </ul>
       </div>
@@ -96,10 +94,15 @@
 
   <div id="documentation">
     
-<p>$:.unshift File.dirname(__FILE__) + ‘lib’ require “bundler/gem_tasks”
-require ‘rspec/core/rake_task’</p>
+<p>$:.unshift File.dirname(__FILE__) + ‘lib’ require “bundler/gem_tasks”</p>
 
 <p>RSpec::Core::RakeTask.new task :default =&gt; :spec</p>
+
+<p>desc “Run spec” task :spec do</p>
+
+<pre>sh &quot;cd spec \n rspec -I. matrices_p9_spec.rb&quot;</pre>
+
+<p>end</p>
 
 <p>desc “Run UnitTest” task :test do</p>
 

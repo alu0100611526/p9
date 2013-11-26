@@ -91,17 +91,15 @@
         
           <li class="file"><a href="./Gemfile.html">Gemfile</a></li>
         
-          <li class="file"><a href="./Gemfile~.html">Gemfile~</a></li>
-        
           <li class="file"><a href="./Guardfile.html">Guardfile</a></li>
+        
+          <li class="file"><a href="./Guardfile~.html">Guardfile~</a></li>
         
           <li class="file"><a href="./LICENSE_txt.html">LICENSE.txt</a></li>
         
           <li class="file"><a href="./Rakefile.html">Rakefile</a></li>
         
           <li class="file"><a href="./Rakefile~.html">Rakefile~</a></li>
-        
-          <li class="file"><a href="./tmp/rspec_guard_result.html">rspec_guard_result</a></li>
         
         </ul>
       </div>
@@ -149,6 +147,9 @@
 
     <div id="description" class="description">
       
+<p>Clase que hereda de la clase <a href="Matriz.html">Matriz</a>. Almacena
+matrices dispersas (matrices que la mayoria de sus posiciones son nulas 0)</p>
+
     </div><!-- description -->
 
     
@@ -179,7 +180,8 @@
 
           <div class="method-description">
           
-          
+          <p>Almacena las filas en que se encuentra algun valor Almacena las columnas en
+que se encuentra algun valor Almacena los valores correspondientes</p>
           
           </div>
         </div>
@@ -196,7 +198,8 @@
 
           <div class="method-description">
           
-          
+          <p>Almacena las filas en que se encuentra algun valor Almacena las columnas en
+que se encuentra algun valor Almacena los valores correspondientes</p>
           
           </div>
         </div>
@@ -213,7 +216,8 @@
 
           <div class="method-description">
           
-          
+          <p>Almacena las filas en que se encuentra algun valor Almacena las columnas en
+que se encuentra algun valor Almacena los valores correspondientes</p>
           
           </div>
         </div>
@@ -240,13 +244,14 @@
 
           <div class="method-description">
             
-            
+            <p>se recibe el valor de filas, columnas, los dos arrays con las posiciones en
+que hay valores y los valores correspondientes</p>
             
 
             
             <div class="method-source-code" id="new-source">
 <pre>
-<span class="ruby-comment"># File lib/matrices_p9.rb, line 299</span>
+<span class="ruby-comment"># File lib/matrices_p9.rb, line 317</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">f</span>,<span class="ruby-identifier">c</span>,<span class="ruby-identifier">posx</span>, <span class="ruby-identifier">posy</span>, <span class="ruby-identifier">valor</span>)
         <span class="ruby-keyword">super</span>(<span class="ruby-identifier">f</span>,<span class="ruby-identifier">c</span>)
         <span class="ruby-ivar">@posx</span> = <span class="ruby-identifier">posx</span>
@@ -283,13 +288,13 @@
 
           <div class="method-description">
             
-            
+            <p>devuelve el mayor valor almacenado en la matriz</p>
             
 
             
             <div class="method-source-code" id="max-source">
 <pre>
-<span class="ruby-comment"># File lib/matrices_p9.rb, line 316</span>
+<span class="ruby-comment"># File lib/matrices_p9.rb, line 336</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">max</span>
         <span class="ruby-identifier">m</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">valor</span>[<span class="ruby-value">0</span>]
         <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> (<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-keyword">self</span>.<span class="ruby-identifier">valor</span>.<span class="ruby-identifier">size</span>.<span class="ruby-identifier">to_i</span>)
@@ -322,13 +327,13 @@
 
           <div class="method-description">
             
-            
+            <p>devuelve el menor valor almacenado en la matriz</p>
             
 
             
             <div class="method-source-code" id="min-source">
 <pre>
-<span class="ruby-comment"># File lib/matrices_p9.rb, line 326</span>
+<span class="ruby-comment"># File lib/matrices_p9.rb, line 347</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">min</span>
         <span class="ruby-identifier">m</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">valor</span>[<span class="ruby-value">0</span>]
         <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> (<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-keyword">self</span>.<span class="ruby-identifier">valor</span>.<span class="ruby-identifier">size</span>.<span class="ruby-identifier">to_i</span>)
@@ -361,13 +366,14 @@
 
           <div class="method-description">
             
-            
+            <p>Retorna el valor correspondiente a las posiciones que se le pasen como
+parámetros</p>
             
 
             
             <div class="method-source-code" id="pos-source">
 <pre>
-<span class="ruby-comment"># File lib/matrices_p9.rb, line 336</span>
+<span class="ruby-comment"># File lib/matrices_p9.rb, line 357</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">pos</span>(<span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span>)
         <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> (<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-keyword">self</span>.<span class="ruby-identifier">posx</span>.<span class="ruby-identifier">size</span>)
                 <span class="ruby-keyword">if</span>(<span class="ruby-identifier">posx</span>[<span class="ruby-identifier">i</span>]<span class="ruby-operator">==</span><span class="ruby-identifier">a</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">posy</span>[<span class="ruby-identifier">i</span>]<span class="ruby-operator">==</span><span class="ruby-identifier">b</span>)
@@ -399,13 +405,13 @@
 
           <div class="method-description">
             
-            
+            <p>Mdevuelve la matriz en forma de string</p>
             
 
             
             <div class="method-source-code" id="to_s-source">
 <pre>
-<span class="ruby-comment"># File lib/matrices_p9.rb, line 307</span>
+<span class="ruby-comment"># File lib/matrices_p9.rb, line 326</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
         <span class="ruby-identifier">s</span>=<span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
         <span class="ruby-identifier">s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;[&quot;</span>

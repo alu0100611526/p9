@@ -1,12 +1,11 @@
-# Pruebas unitarias de la clase matriz densa
 
 require 'fraccion'
 require 'matrices_p9'
 require "test/unit"
 
-
+# Pruebas unitarias de la clase matriz densa
 class Test_MatrizDensa < Test::Unit::TestCase
-	
+	#prueba para suma de matrices densas 
 	def test_1
 	
 		assert_equal "[[2, 4, 6], [8, 10, 12], [14, 16, 18]]", (MatrizDensa.new(3,3,[1,2,3,4,5,6,7,8,9]) + MatrizDensa.new(3,3,[1,2,3,4,5,6,7,8,9])).to_s	

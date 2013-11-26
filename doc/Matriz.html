@@ -99,17 +99,15 @@
         
           <li class="file"><a href="./Gemfile.html">Gemfile</a></li>
         
-          <li class="file"><a href="./Gemfile~.html">Gemfile~</a></li>
-        
           <li class="file"><a href="./Guardfile.html">Guardfile</a></li>
+        
+          <li class="file"><a href="./Guardfile~.html">Guardfile~</a></li>
         
           <li class="file"><a href="./LICENSE_txt.html">LICENSE.txt</a></li>
         
           <li class="file"><a href="./Rakefile.html">Rakefile</a></li>
         
           <li class="file"><a href="./Rakefile~.html">Rakefile~</a></li>
-        
-          <li class="file"><a href="./tmp/rspec_guard_result.html">rspec_guard_result</a></li>
         
         </ul>
       </div>
@@ -157,6 +155,9 @@
 
     <div id="description" class="description">
       
+<p>Clase abstracta de la que heredan matriz densa y dispersa. No se puede
+crear un objeto de esta clase.</p>
+
     </div><!-- description -->
 
     
@@ -187,7 +188,7 @@
 
           <div class="method-description">
           
-          
+          <p>Numero de filas Numero de columnas</p>
           
           </div>
         </div>
@@ -204,7 +205,7 @@
 
           <div class="method-description">
           
-          
+          <p>Numero de filas Numero de columnas</p>
           
           </div>
         </div>
@@ -231,17 +232,17 @@
 
           <div class="method-description">
             
-            
+            <p>Se almacena el valor de las filas y las columnas segun se le pasen por
+parametros.</p>
             
 
             
             <div class="method-source-code" id="new-source">
 <pre>
-<span class="ruby-comment"># File lib/matrices_p9.rb, line 8</span>
+<span class="ruby-comment"># File lib/matrices_p9.rb, line 16</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">f</span>, <span class="ruby-identifier">c</span>)
-        <span class="ruby-comment">#atributo</span>
-       <span class="ruby-ivar">@fil</span>=<span class="ruby-identifier">f</span>.<span class="ruby-identifier">to_i</span>; <span class="ruby-comment">#Numero de filas</span>
-       <span class="ruby-ivar">@col</span>=<span class="ruby-identifier">c</span>.<span class="ruby-identifier">to_i</span>; <span class="ruby-comment">#Numero de columnas</span>
+       <span class="ruby-ivar">@fil</span>=<span class="ruby-identifier">f</span>.<span class="ruby-identifier">to_i</span>;                  
+       <span class="ruby-ivar">@col</span>=<span class="ruby-identifier">c</span>.<span class="ruby-identifier">to_i</span>; 
 <span class="ruby-keyword">end</span></pre>
             </div><!-- new-source -->
             
@@ -280,7 +281,7 @@ devuelve una matriz con el resultado de la suma de             forma A+B=
             
             <div class="method-source-code" id="2B-source">
 <pre>
-<span class="ruby-comment"># File lib/matrices_p9.rb, line 16</span>
+<span class="ruby-comment"># File lib/matrices_p9.rb, line 23</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">+</span>(<span class="ruby-identifier">other</span>)                
         <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">fil</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">fil</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">col</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">col</span>)
                 <span class="ruby-comment"># SELF Matrices densas</span>
@@ -403,13 +404,14 @@ devuelve una matriz con el resultado de la suma de             forma A+B=
 
           <div class="method-description">
             
-            
+            <p>Sobrecarga del operador de resta, recibe como parametros dos matrices y
+devuelve una matriz con el resultado de la suma de forma A-B= (Aij+Bij)</p>
             
 
             
             <div class="method-source-code" id="2D-source">
 <pre>
-<span class="ruby-comment"># File lib/matrices_p9.rb, line 116</span>
+<span class="ruby-comment"># File lib/matrices_p9.rb, line 124</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">other</span>)                
         <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">fil</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">fil</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">col</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">col</span>)
                 <span class="ruby-comment"># SELF Matrices densas</span>

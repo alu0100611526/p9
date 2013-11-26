@@ -1,14 +1,13 @@
-Tue, 26 Nov 2013 12:08:53 +0000
-./Gemfile~	Tue, 19 Nov 2013 08:29:24 +0000
-./Guardfile	Mon, 18 Nov 2013 18:34:13 +0000
-./spec/matrices_p9_spec.rb	Tue, 26 Nov 2013 12:08:33 +0000
-./test/tc_MatrizDispersa.rb	Tue, 19 Nov 2013 12:01:44 +0000
-./test/tc_MatrizDensa.rb	Tue, 19 Nov 2013 12:01:44 +0000
-./Gemfile	Tue, 19 Nov 2013 08:29:29 +0000
-./LICENSE.txt	Tue, 12 Nov 2013 09:40:48 +0000
-./tmp/rspec_guard_result	Tue, 19 Nov 2013 08:42:19 +0000
-./lib/matrices_p9.rb	Tue, 26 Nov 2013 12:08:33 +0000
-./lib/matrices_p9/version.rb	Tue, 12 Nov 2013 09:40:48 +0000
-./lib/fraccion.rb	Tue, 19 Nov 2013 09:45:54 +0000
-./Rakefile	Tue, 26 Nov 2013 12:08:33 +0000
-./Rakefile~	Tue, 19 Nov 2013 12:08:55 +0000
+Tue, 26 Nov 2013 13:13:20 +0000
+./Rakefile	Tue, 19 Nov 2013 12:08:44 +0000
+./LICENSE.txt	Mon, 18 Nov 2013 15:41:56 +0000
+./Gemfile	Tue, 19 Nov 2013 10:09:42 +0000
+./spec/matrices_p9_spec.rb	Tue, 26 Nov 2013 12:49:27 +0000
+./lib/matrices_p9.rb	Tue, 26 Nov 2013 13:13:10 +0000
+./lib/matrices_p9/version.rb	Tue, 26 Nov 2013 13:10:09 +0000
+./lib/fraccion.rb	Tue, 26 Nov 2013 12:37:21 +0000
+./Rakefile~	Tue, 19 Nov 2013 12:08:26 +0000
+./test/tc_MatrizDispersa.rb	Tue, 26 Nov 2013 13:11:01 +0000
+./test/tc_MatrizDensa.rb	Tue, 26 Nov 2013 13:09:03 +0000
+./Guardfile	Mon, 18 Nov 2013 18:00:59 +0000
+./Guardfile~	Mon, 18 Nov 2013 16:45:23 +0000

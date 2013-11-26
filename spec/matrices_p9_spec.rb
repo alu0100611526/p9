@@ -1,5 +1,6 @@
 require 'matrices_p9' 
 
+#expectativas para la clase Matriz y sus clase hijas ( Densas y Dispersas) 
 describe Matriz do
 	before :each do	
 		#Matrices densas

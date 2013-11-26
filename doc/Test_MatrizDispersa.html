@@ -83,17 +83,15 @@
         
           <li class="file"><a href="./Gemfile.html">Gemfile</a></li>
         
-          <li class="file"><a href="./Gemfile~.html">Gemfile~</a></li>
-        
           <li class="file"><a href="./Guardfile.html">Guardfile</a></li>
+        
+          <li class="file"><a href="./Guardfile~.html">Guardfile~</a></li>
         
           <li class="file"><a href="./LICENSE_txt.html">LICENSE.txt</a></li>
         
           <li class="file"><a href="./Rakefile.html">Rakefile</a></li>
         
           <li class="file"><a href="./Rakefile~.html">Rakefile~</a></li>
-        
-          <li class="file"><a href="./tmp/rspec_guard_result.html">rspec_guard_result</a></li>
         
         </ul>
       </div>
@@ -141,6 +139,8 @@
 
     <div id="description" class="description">
       
+<p>Pruebas unitarias de la clase matriz dispersa</p>
+
     </div><!-- description -->
 
     
@@ -174,13 +174,13 @@
 
           <div class="method-description">
             
-            
+            <p>Prueba con matrices dispersas</p>
             
 
             
             <div class="method-source-code" id="test_1-source">
 <pre>
-<span class="ruby-comment"># File test/tc_MatrizDispersa.rb, line 9</span>
+<span class="ruby-comment"># File test/tc_MatrizDispersa.rb, line 8</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">test_1</span>
 
         <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;[[0,0,2][1,1,4][2,2,6]]&quot;</span>, (<span class="ruby-constant">MatrizDispersa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">3</span>,<span class="ruby-value">3</span>,[<span class="ruby-value">0</span>,<span class="ruby-value">1</span>,<span class="ruby-value">2</span>],[<span class="ruby-value">0</span>,<span class="ruby-value">1</span>,<span class="ruby-value">2</span>],[<span class="ruby-value">1</span>,<span class="ruby-value">2</span>,<span class="ruby-value">3</span>]) <span class="ruby-operator">+</span> <span class="ruby-constant">MatrizDispersa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">3</span>,<span class="ruby-value">3</span>,[<span class="ruby-value">0</span>,<span class="ruby-value">1</span>,<span class="ruby-value">2</span>],[<span class="ruby-value">0</span>,<span class="ruby-value">1</span>,<span class="ruby-value">2</span>],[<span class="ruby-value">1</span>,<span class="ruby-value">2</span>,<span class="ruby-value">3</span>])).<span class="ruby-identifier">to_s</span>      

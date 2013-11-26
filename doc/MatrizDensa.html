@@ -93,17 +93,15 @@
         
           <li class="file"><a href="./Gemfile.html">Gemfile</a></li>
         
-          <li class="file"><a href="./Gemfile~.html">Gemfile~</a></li>
-        
           <li class="file"><a href="./Guardfile.html">Guardfile</a></li>
+        
+          <li class="file"><a href="./Guardfile~.html">Guardfile~</a></li>
         
           <li class="file"><a href="./LICENSE_txt.html">LICENSE.txt</a></li>
         
           <li class="file"><a href="./Rakefile.html">Rakefile</a></li>
         
           <li class="file"><a href="./Rakefile~.html">Rakefile~</a></li>
-        
-          <li class="file"><a href="./tmp/rspec_guard_result.html">rspec_guard_result</a></li>
         
         </ul>
       </div>
@@ -151,6 +149,8 @@
 
     <div id="description" class="description">
       
+<p>Clase que hereda de la clase matriz. Almacena matrices densas.</p>
+
     </div><!-- description -->
 
     
@@ -181,7 +181,7 @@
 
           <div class="method-description">
           
-          
+          <p>Array bidimensional que representa la matriz</p>
           
           </div>
         </div>
@@ -208,17 +208,18 @@
 
           <div class="method-description">
             
-            
+            <p>crea una matriz con n filas, m columnas y almacena los valores que se le
+pasan por parámetros</p>
             
 
             
             <div class="method-source-code" id="new-source">
 <pre>
-<span class="ruby-comment"># File lib/matrices_p9.rb, line 223</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">f</span>,<span class="ruby-identifier">c</span>,<span class="ruby-identifier">e</span>)
-        <span class="ruby-keyword">super</span>(<span class="ruby-identifier">f</span>,<span class="ruby-identifier">c</span>)
-        <span class="ruby-ivar">@mat</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@fil</span>.<span class="ruby-identifier">to_i</span>){<span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@col</span>.<span class="ruby-identifier">to_i</span>)}
+<span class="ruby-comment"># File lib/matrices_p9.rb, line 233</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">f</span>,<span class="ruby-identifier">c</span>,<span class="ruby-identifier">e</span>) 
 
+        <span class="ruby-keyword">super</span>(<span class="ruby-identifier">f</span>,<span class="ruby-identifier">c</span>)
+        <span class="ruby-ivar">@mat</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@fil</span>.<span class="ruby-identifier">to_i</span>){<span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@col</span>.<span class="ruby-identifier">to_i</span>)} <span class="ruby-comment">#k2</span>
        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">e</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>)
                 <span class="ruby-comment">#Rellenamos la matriz con lo valores recibidos </span>
                <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> (<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-ivar">@fil</span>.<span class="ruby-identifier">to_i</span>)
@@ -258,13 +259,13 @@
           <div class="method-description">
             
             <p>Operador de comparacion (Modulo comparable). se comparan por la suma de sus
-componentes ¡¡¡¡¡¡PONERLO EN LA CLASE MADRE!!!!!!</p>
+componentes.</p>
             
 
             
             <div class="method-source-code" id="3C-3D-3E-source">
 <pre>
-<span class="ruby-comment"># File lib/matrices_p9.rb, line 276</span>
+<span class="ruby-comment"># File lib/matrices_p9.rb, line 288</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">&lt;=&gt;</span> (<span class="ruby-identifier">other</span>)
         <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span><span class="ruby-constant">MatrizDensa</span>
         <span class="ruby-identifier">c1</span>=<span class="ruby-value">0</span>
@@ -303,13 +304,13 @@ componentes ¡¡¡¡¡¡PONERLO EN LA CLASE MADRE!!!!!!</p>
 
           <div class="method-description">
             
-            <p>cambiar los for para hacerlos con bloques.</p>
+            <p>funcion que calcula el mayor valor que se encuentra en la matriz</p>
             
 
             
             <div class="method-source-code" id="max-source">
 <pre>
-<span class="ruby-comment"># File lib/matrices_p9.rb, line 247</span>
+<span class="ruby-comment"># File lib/matrices_p9.rb, line 258</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">max</span>
         <span class="ruby-identifier">m</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">mat</span>[<span class="ruby-value">0</span>][<span class="ruby-value">0</span>]
         <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> (<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-ivar">@fil</span>.<span class="ruby-identifier">to_i</span>)
@@ -346,13 +347,13 @@ componentes ¡¡¡¡¡¡PONERLO EN LA CLASE MADRE!!!!!!</p>
 
           <div class="method-description">
             
-            
+            <p>funcion que calcula el menor valor que se encuentra en la matriz</p>
             
 
             
             <div class="method-source-code" id="min-source">
 <pre>
-<span class="ruby-comment"># File lib/matrices_p9.rb, line 261</span>
+<span class="ruby-comment"># File lib/matrices_p9.rb, line 273</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">min</span>
         <span class="ruby-identifier">m</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">mat</span>[<span class="ruby-value">0</span>][<span class="ruby-value">0</span>]
         <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> (<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-ivar">@fil</span>.<span class="ruby-identifier">to_i</span>)
@@ -388,13 +389,13 @@ componentes ¡¡¡¡¡¡PONERLO EN LA CLASE MADRE!!!!!!</p>
 
           <div class="method-description">
             
-            <p>Metodos getter devuelve el valor de una posicion determinada</p>
+            <p>Metodo getter que devuelve el valor de una posicion determinada</p>
             
 
             
             <div class="method-source-code" id="pos-source">
 <pre>
-<span class="ruby-comment"># File lib/matrices_p9.rb, line 238</span>
+<span class="ruby-comment"># File lib/matrices_p9.rb, line 248</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">pos</span>(<span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span>)
         <span class="ruby-ivar">@mat</span>[<span class="ruby-identifier">a</span>][<span class="ruby-identifier">b</span>]
 <span class="ruby-keyword">end</span></pre>
@@ -427,7 +428,7 @@ componentes ¡¡¡¡¡¡PONERLO EN LA CLASE MADRE!!!!!!</p>
             
             <div class="method-source-code" id="to_s-source">
 <pre>
-<span class="ruby-comment"># File lib/matrices_p9.rb, line 243</span>
+<span class="ruby-comment"># File lib/matrices_p9.rb, line 253</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>    
         <span class="ruby-node">&quot;#{@mat}&quot;</span>
 <span class="ruby-keyword">end</span></pre>

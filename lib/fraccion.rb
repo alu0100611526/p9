@@ -1,11 +1,10 @@
-
-#require "./gcd.rb"
-#Programa que trabaja con fracciones
-#Adriana Rolo Inchausti, Luis Antonio Orta Mendes 
-
+#Clase para trabajar con fracciones. 
 class Fraccion
-attr_reader :denominador, :numerador
+#Valor de numerador
+#Valor de denominador
 
+attr_reader :denominador, :numerador
+#Crea una fraccion con num como numerador y denomin como denominador
 	def initialize(num, denomin)
 		#atributo
 		mcd=gcd(num,denomin)
@@ -24,13 +23,12 @@ attr_reader :denominador, :numerador
 	end
 	
 
-# Metodos getter de Numerador y denominador
-
+# Retorna el valor del numerador
 	def num
 		return @numerador
 	end
 
-
+#Retorna el valor del denominador
 	def denom
 		return @denominador
 	end 
@@ -154,8 +152,7 @@ attr_reader :denominador, :numerador
 	end
 
 
-#Sobrecarga de operadores de comparación devuelve true en caso de que sea cierto y falso en caso contrario 
-#Mayor que 
+#Sobrecarga de operadores de comparación devuelve true en caso de que el numero con el que se invoca es mayor que el segundo y falso en caso contrario 
 	def > (otro)
 		if (@numerador/@denominador > otro.numerador/otro.denominador)
 			return true
@@ -165,7 +162,8 @@ attr_reader :denominador, :numerador
 		
 	end
 	
-#menor que 	
+
+#Sobrecarga de operadores de comparación devuelve true en caso de que el numero con el que se invoca es menor que el segundo y falso en caso contrario 
 	def < (otro)
 		if (@numerador/@denominador < otro.numerador/otro.denominador)
 			return true
@@ -174,7 +172,9 @@ attr_reader :denominador, :numerador
 		end
 		
 	end
-#mayor igual que 
+	
+
+#Sobrecarga de operadores de comparación devuelve true en caso de que el numero con el que se invoca es mayor o igual que el segundo y falso en caso contrario 
 	def >= (otro)
 		if (@numerador/@denominador >= otro.numerador/otro.denominador)
 			return true
@@ -183,7 +183,9 @@ attr_reader :denominador, :numerador
 		end
 		
 	end
-#menos igual que 
+	
+
+#Sobrecarga de operadores de comparación devuelve true en caso de que el numero con el que se invoca es menor que el segundo y falso en caso contrario 
 	def <= (otro)
 		if (@numerador/@denominador <= otro.numerador/otro.denominador)
 			return true
@@ -192,7 +194,8 @@ attr_reader :denominador, :numerador
 		end
 		
 	end
-#Coerce
+	
+#Coerce. se usa para multiplicar numeros por fracciones
 	def coerce(other)
 		[self, other]
 	end
