@@ -209,7 +209,7 @@
 
           <div class="method-description">
           
-          <p>Valor de numerador Valor de denominador</p>
+          <p>Valor de numerador</p>
           
           </div>
         </div>
@@ -224,7 +224,7 @@
 
           <div class="method-description">
           
-          <p>Valor de numerador Valor de denominador</p>
+          <p>Valor de denominador</p>
           
           </div>
         </div>
@@ -257,7 +257,7 @@
             
             <div class="method-source-code" id="new-source">
 <pre>
-<span class="ruby-comment"># File lib/fraccion.rb, line 8</span>
+<span class="ruby-comment"># File lib/fraccion.rb, line 9</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">num</span>, <span class="ruby-identifier">denomin</span>)
         <span class="ruby-comment">#atributo</span>
         <span class="ruby-identifier">mcd</span>=<span class="ruby-identifier">gcd</span>(<span class="ruby-identifier">num</span>,<span class="ruby-identifier">denomin</span>)
@@ -301,7 +301,7 @@ devuelve el resto de la division de las mismas</p>
             
             <div class="method-source-code" id="25-source">
 <pre>
-<span class="ruby-comment"># File lib/fraccion.rb, line 148</span>
+<span class="ruby-comment"># File lib/fraccion.rb, line 149</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">%</span> (<span class="ruby-identifier">other</span>)
         <span class="ruby-identifier">aux</span>=<span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>,<span class="ruby-value">1</span>)
         <span class="ruby-identifier">aux</span>=<span class="ruby-keyword">self</span><span class="ruby-operator">/</span><span class="ruby-identifier">other</span>
@@ -337,7 +337,7 @@ francciones y devuelve una fraccion con el resultado de la multiplicación</p>
             
             <div class="method-source-code" id="2A-source">
 <pre>
-<span class="ruby-comment"># File lib/fraccion.rb, line 129</span>
+<span class="ruby-comment"># File lib/fraccion.rb, line 130</span>
 <span class="ruby-keyword">def</span> * (<span class="ruby-identifier">other</span>) 
         <span class="ruby-identifier">nume</span> = <span class="ruby-ivar">@numerador</span> * <span class="ruby-identifier">other</span>.<span class="ruby-identifier">numerador</span>
         <span class="ruby-identifier">deno</span> = <span class="ruby-ivar">@denominador</span> * <span class="ruby-identifier">other</span>.<span class="ruby-identifier">denominador</span>
@@ -375,7 +375,7 @@ devuelve una fraccion con el resultado de la suma</p>
             
             <div class="method-source-code" id="2B-source">
 <pre>
-<span class="ruby-comment"># File lib/fraccion.rb, line 85</span>
+<span class="ruby-comment"># File lib/fraccion.rb, line 86</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">+</span>(<span class="ruby-identifier">other</span>)
         <span class="ruby-keyword">if</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">instance_of?</span><span class="ruby-constant">Fixnum</span>)
                 <span class="ruby-identifier">temp</span>=<span class="ruby-identifier">other</span>
@@ -424,7 +424,7 @@ devuelve una fraccion con el resultado de la resta</p>
             
             <div class="method-source-code" id="2D-source">
 <pre>
-<span class="ruby-comment"># File lib/fraccion.rb, line 106</span>
+<span class="ruby-comment"># File lib/fraccion.rb, line 107</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">other</span>)
         <span class="ruby-keyword">if</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">instance_of?</span><span class="ruby-constant">Fixnum</span>)
                 <span class="ruby-identifier">temp</span>=<span class="ruby-identifier">other</span>
@@ -476,7 +476,7 @@ y devuelve una fraccion con el resultado de la division</p>
             
             <div class="method-source-code" id="2F-source">
 <pre>
-<span class="ruby-comment"># File lib/fraccion.rb, line 138</span>
+<span class="ruby-comment"># File lib/fraccion.rb, line 139</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">/</span> (<span class="ruby-identifier">other</span>)
 
         <span class="ruby-identifier">nume</span> = <span class="ruby-ivar">@numerador</span> *<span class="ruby-identifier">other</span>.<span class="ruby-identifier">denominador</span>
@@ -516,7 +516,7 @@ contrario</p>
             
             <div class="method-source-code" id="3C-source">
 <pre>
-<span class="ruby-comment"># File lib/fraccion.rb, line 167</span>
+<span class="ruby-comment"># File lib/fraccion.rb, line 168</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">&lt;</span> (<span class="ruby-identifier">otro</span>)
         <span class="ruby-keyword">if</span> (<span class="ruby-ivar">@numerador</span><span class="ruby-operator">/</span><span class="ruby-ivar">@denominador</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">otro</span>.<span class="ruby-identifier">numerador</span><span class="ruby-operator">/</span><span class="ruby-identifier">otro</span>.<span class="ruby-identifier">denominador</span>)
                 <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
@@ -556,7 +556,7 @@ contrario</p>
             
             <div class="method-source-code" id="3C-3D-source">
 <pre>
-<span class="ruby-comment"># File lib/fraccion.rb, line 189</span>
+<span class="ruby-comment"># File lib/fraccion.rb, line 190</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">&lt;=</span> (<span class="ruby-identifier">otro</span>)
         <span class="ruby-keyword">if</span> (<span class="ruby-ivar">@numerador</span><span class="ruby-operator">/</span><span class="ruby-ivar">@denominador</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">otro</span>.<span class="ruby-identifier">numerador</span><span class="ruby-operator">/</span><span class="ruby-identifier">otro</span>.<span class="ruby-identifier">denominador</span>)
                 <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
@@ -595,7 +595,7 @@ false en caso contrario</p>
             
             <div class="method-source-code" id="3D-3D-source">
 <pre>
-<span class="ruby-comment"># File lib/fraccion.rb, line 48</span>
+<span class="ruby-comment"># File lib/fraccion.rb, line 49</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">==</span> (<span class="ruby-identifier">otro</span>)
         <span class="ruby-keyword">if</span> (<span class="ruby-ivar">@numerador</span><span class="ruby-operator">==</span><span class="ruby-identifier">otro</span>.<span class="ruby-identifier">numerador</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-ivar">@denominador</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">otro</span>.<span class="ruby-identifier">denominador</span>)
                 <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
@@ -634,7 +634,7 @@ contrario</p>
             
             <div class="method-source-code" id="3E-source">
 <pre>
-<span class="ruby-comment"># File lib/fraccion.rb, line 156</span>
+<span class="ruby-comment"># File lib/fraccion.rb, line 157</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">&gt;</span> (<span class="ruby-identifier">otro</span>)
         <span class="ruby-keyword">if</span> (<span class="ruby-ivar">@numerador</span><span class="ruby-operator">/</span><span class="ruby-ivar">@denominador</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">otro</span>.<span class="ruby-identifier">numerador</span><span class="ruby-operator">/</span><span class="ruby-identifier">otro</span>.<span class="ruby-identifier">denominador</span>)
                 <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
@@ -674,7 +674,7 @@ contrario</p>
             
             <div class="method-source-code" id="3E-3D-source">
 <pre>
-<span class="ruby-comment"># File lib/fraccion.rb, line 178</span>
+<span class="ruby-comment"># File lib/fraccion.rb, line 179</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">&gt;=</span> (<span class="ruby-identifier">otro</span>)
         <span class="ruby-keyword">if</span> (<span class="ruby-ivar">@numerador</span><span class="ruby-operator">/</span><span class="ruby-ivar">@denominador</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">otro</span>.<span class="ruby-identifier">numerador</span><span class="ruby-operator">/</span><span class="ruby-identifier">otro</span>.<span class="ruby-identifier">denominador</span>)
                 <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
@@ -713,7 +713,7 @@ denominador positivo)</p>
             
             <div class="method-source-code" id="abs-source">
 <pre>
-<span class="ruby-comment"># File lib/fraccion.rb, line 57</span>
+<span class="ruby-comment"># File lib/fraccion.rb, line 58</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">abs</span>
         <span class="ruby-keyword">if</span> <span class="ruby-ivar">@numerador</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
                 <span class="ruby-ivar">@numerador</span> = <span class="ruby-ivar">@numerador</span>*<span class="ruby-value">-1</span>
@@ -752,7 +752,7 @@ denominador positivo)</p>
             
             <div class="method-source-code" id="coerce-source">
 <pre>
-<span class="ruby-comment"># File lib/fraccion.rb, line 199</span>
+<span class="ruby-comment"># File lib/fraccion.rb, line 200</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">coerce</span>(<span class="ruby-identifier">other</span>)
         [<span class="ruby-keyword">self</span>, <span class="ruby-identifier">other</span>]
 <span class="ruby-keyword">end</span></pre>
@@ -785,7 +785,7 @@ denominador positivo)</p>
             
             <div class="method-source-code" id="denom-source">
 <pre>
-<span class="ruby-comment"># File lib/fraccion.rb, line 32</span>
+<span class="ruby-comment"># File lib/fraccion.rb, line 33</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">denom</span>
         <span class="ruby-keyword">return</span> <span class="ruby-ivar">@denominador</span>
 <span class="ruby-keyword">end</span></pre>
@@ -818,7 +818,7 @@ denominador positivo)</p>
             
             <div class="method-source-code" id="gcd-source">
 <pre>
-<span class="ruby-comment"># File lib/fraccion.rb, line 17</span>
+<span class="ruby-comment"># File lib/fraccion.rb, line 18</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">gcd</span>(<span class="ruby-identifier">u</span>, <span class="ruby-identifier">v</span>)
         <span class="ruby-identifier">u</span>, <span class="ruby-identifier">v</span> = <span class="ruby-identifier">u</span>.<span class="ruby-identifier">abs</span>, <span class="ruby-identifier">v</span>.<span class="ruby-identifier">abs</span>
         <span class="ruby-keyword">while</span> <span class="ruby-identifier">v</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
@@ -855,7 +855,7 @@ denominador positivo)</p>
             
             <div class="method-source-code" id="mcm-source">
 <pre>
-<span class="ruby-comment"># File lib/fraccion.rb, line 81</span>
+<span class="ruby-comment"># File lib/fraccion.rb, line 82</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">mcm</span>(<span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span>)
         (<span class="ruby-identifier">a</span>*<span class="ruby-identifier">b</span>)<span class="ruby-operator">/</span><span class="ruby-identifier">gcd</span>(<span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -888,7 +888,7 @@ denominador positivo)</p>
             
             <div class="method-source-code" id="num-source">
 <pre>
-<span class="ruby-comment"># File lib/fraccion.rb, line 27</span>
+<span class="ruby-comment"># File lib/fraccion.rb, line 28</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">num</span>
         <span class="ruby-keyword">return</span> <span class="ruby-ivar">@numerador</span>
 <span class="ruby-keyword">end</span></pre>
@@ -922,7 +922,7 @@ incialmente</p>
             
             <div class="method-source-code" id="opuesto-source">
 <pre>
-<span class="ruby-comment"># File lib/fraccion.rb, line 75</span>
+<span class="ruby-comment"># File lib/fraccion.rb, line 76</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">opuesto</span>
         <span class="ruby-ivar">@numerador</span> = <span class="ruby-value">-1</span>*<span class="ruby-ivar">@numerador</span>
         <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
@@ -957,7 +957,7 @@ a/b, devolveria b/a</p>
             
             <div class="method-source-code" id="reciprocal-source">
 <pre>
-<span class="ruby-comment"># File lib/fraccion.rb, line 68</span>
+<span class="ruby-comment"># File lib/fraccion.rb, line 69</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">reciprocal</span>
         <span class="ruby-identifier">aux</span>= <span class="ruby-ivar">@numerador</span> 
         <span class="ruby-ivar">@numerador</span> =  <span class="ruby-ivar">@denominador</span>
@@ -992,7 +992,7 @@ a/b, devolveria b/a</p>
             
             <div class="method-source-code" id="to_f-source">
 <pre>
-<span class="ruby-comment"># File lib/fraccion.rb, line 42</span>
+<span class="ruby-comment"># File lib/fraccion.rb, line 43</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">to_f</span> 
         <span class="ruby-identifier">a</span>=<span class="ruby-ivar">@numerador</span>.<span class="ruby-identifier">to_f</span>
         <span class="ruby-identifier">b</span>=<span class="ruby-ivar">@denominador</span>.<span class="ruby-identifier">to_f</span>
@@ -1027,7 +1027,7 @@ a/b, devolveria b/a</p>
             
             <div class="method-source-code" id="to_s-source">
 <pre>
-<span class="ruby-comment"># File lib/fraccion.rb, line 37</span>
+<span class="ruby-comment"># File lib/fraccion.rb, line 38</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
         <span class="ruby-node">&quot;#{@numerador}/#{@denominador}&quot;</span>
 <span class="ruby-keyword">end</span></pre>

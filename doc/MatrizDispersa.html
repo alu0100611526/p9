@@ -180,8 +180,7 @@ matrices dispersas (matrices que la mayoria de sus posiciones son nulas 0)</p>
 
           <div class="method-description">
           
-          <p>Almacena las filas en que se encuentra algun valor Almacena las columnas en
-que se encuentra algun valor Almacena los valores correspondientes</p>
+          <p>Almacena las filas en que se encuentra algun valor</p>
           
           </div>
         </div>
@@ -198,8 +197,7 @@ que se encuentra algun valor Almacena los valores correspondientes</p>
 
           <div class="method-description">
           
-          <p>Almacena las filas en que se encuentra algun valor Almacena las columnas en
-que se encuentra algun valor Almacena los valores correspondientes</p>
+          <p>Almacena las columnas en que se encuentra algun valor</p>
           
           </div>
         </div>
@@ -216,8 +214,7 @@ que se encuentra algun valor Almacena los valores correspondientes</p>
 
           <div class="method-description">
           
-          <p>Almacena las filas en que se encuentra algun valor Almacena las columnas en
-que se encuentra algun valor Almacena los valores correspondientes</p>
+          <p>Almacena los valores correspondientes</p>
           
           </div>
         </div>
@@ -251,7 +248,7 @@ que hay valores y los valores correspondientes</p>
             
             <div class="method-source-code" id="new-source">
 <pre>
-<span class="ruby-comment"># File lib/matrices_p9.rb, line 317</span>
+<span class="ruby-comment"># File lib/matrices_p9.rb, line 323</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">f</span>,<span class="ruby-identifier">c</span>,<span class="ruby-identifier">posx</span>, <span class="ruby-identifier">posy</span>, <span class="ruby-identifier">valor</span>)
         <span class="ruby-keyword">super</span>(<span class="ruby-identifier">f</span>,<span class="ruby-identifier">c</span>)
         <span class="ruby-ivar">@posx</span> = <span class="ruby-identifier">posx</span>
@@ -294,7 +291,7 @@ que hay valores y los valores correspondientes</p>
             
             <div class="method-source-code" id="max-source">
 <pre>
-<span class="ruby-comment"># File lib/matrices_p9.rb, line 336</span>
+<span class="ruby-comment"># File lib/matrices_p9.rb, line 342</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">max</span>
         <span class="ruby-identifier">m</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">valor</span>[<span class="ruby-value">0</span>]
         <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> (<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-keyword">self</span>.<span class="ruby-identifier">valor</span>.<span class="ruby-identifier">size</span>.<span class="ruby-identifier">to_i</span>)
@@ -333,7 +330,7 @@ que hay valores y los valores correspondientes</p>
             
             <div class="method-source-code" id="min-source">
 <pre>
-<span class="ruby-comment"># File lib/matrices_p9.rb, line 347</span>
+<span class="ruby-comment"># File lib/matrices_p9.rb, line 353</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">min</span>
         <span class="ruby-identifier">m</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">valor</span>[<span class="ruby-value">0</span>]
         <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> (<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-keyword">self</span>.<span class="ruby-identifier">valor</span>.<span class="ruby-identifier">size</span>.<span class="ruby-identifier">to_i</span>)
@@ -373,7 +370,7 @@ parámetros</p>
             
             <div class="method-source-code" id="pos-source">
 <pre>
-<span class="ruby-comment"># File lib/matrices_p9.rb, line 357</span>
+<span class="ruby-comment"># File lib/matrices_p9.rb, line 363</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">pos</span>(<span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span>)
         <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> (<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-keyword">self</span>.<span class="ruby-identifier">posx</span>.<span class="ruby-identifier">size</span>)
                 <span class="ruby-keyword">if</span>(<span class="ruby-identifier">posx</span>[<span class="ruby-identifier">i</span>]<span class="ruby-operator">==</span><span class="ruby-identifier">a</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">posy</span>[<span class="ruby-identifier">i</span>]<span class="ruby-operator">==</span><span class="ruby-identifier">b</span>)
@@ -411,7 +408,7 @@ parámetros</p>
             
             <div class="method-source-code" id="to_s-source">
 <pre>
-<span class="ruby-comment"># File lib/matrices_p9.rb, line 326</span>
+<span class="ruby-comment"># File lib/matrices_p9.rb, line 332</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
         <span class="ruby-identifier">s</span>=<span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
         <span class="ruby-identifier">s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;[&quot;</span>

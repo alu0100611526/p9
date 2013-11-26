@@ -1,9 +1,10 @@
 #Clase para trabajar con fracciones. 
 class Fraccion
 #Valor de numerador
+attr_reader :denominador
+ 
 #Valor de denominador
-
-attr_reader :denominador, :numerador
+attr_reader :numerador
 #Crea una fraccion con num como numerador y denomin como denominador
 	def initialize(num, denomin)
 		#atributo

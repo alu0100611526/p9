@@ -8,10 +8,10 @@ class Matriz
 include Comparable
 
 #Numero de filas
+attr_accessor :fil 
+
 #Numero de columnas 
-
-attr_accessor :fil, :col 
-
+attr_accessor :col
 	#Se almacena el valor de las filas y las columnas segun se le pasen por parametros. 
 	def initialize(f, c)
 	    	@fil=f.to_i; 	    	
@@ -306,12 +306,18 @@ end
 
 
 #Clase que hereda de la clase Matriz. Almacena matrices dispersas (matrices que la mayoria de sus posiciones son nulas 0)
+
 class MatrizDispersa < Matriz
 #Almacena las filas en que se encuentra algun valor
-#Almacena las columnas en que se encuentra algun valor
-#Almacena los valores correspondientes
+attr_accessor :posx
 
-attr_accessor :posx, :posy, :valor
+#Almacena las columnas en que se encuentra algun valor
+attr_accessor :posy
+
+#Almacena los valores correspondientes
+attr_accessor :valor
+
+
 
 # se recibe el valor de filas, columnas, los dos arrays con las posiciones en que hay valores y los valores correspondientes
 	def initialize(f,c,posx, posy, valor)
