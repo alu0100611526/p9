@@ -282,7 +282,16 @@ attr_accessor :mat
 		end
 		return m
 	end
-	                             
+# Funcion que devuelve la posicion en la que se cumple la condicion especificada al llamarla
+	def encontrar	
+		@fil.to_i.times do |i| 
+			@col.to_i.times do |j| 				
+				if yield(mat[i][j]) 
+					return [i,j]
+				end					
+			end
+		end
+	end
 
 #Operador de comparacion (Modulo comparable). se comparan por la suma de sus componentes.
 	def <=> (other)
@@ -310,14 +319,10 @@ end
 class MatrizDispersa < Matriz
 #Almacena las filas en que se encuentra algun valor
 attr_accessor :posx
-
 #Almacena las columnas en que se encuentra algun valor
 attr_accessor :posy
-
 #Almacena los valores correspondientes
 attr_accessor :valor
-
-
 
 # se recibe el valor de filas, columnas, los dos arrays con las posiciones en que hay valores y los valores correspondientes
 	def initialize(f,c,posx, posy, valor)

@@ -128,6 +128,16 @@ describe Matriz do
 		end		
 		
 		
+	end
+		
+	describe "#Usando bloques" do
+	
+		it "Devuelve la posicion del valor que cumple la condicion" do
+			@m1.encontrar{|e| e*e >= 16}.should eq([1,0])
+			
+		end		
+		
+		
 	end	
 	
 	
